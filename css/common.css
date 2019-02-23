@@ -1,9 +1,131 @@
-html,body {
-    width: 100%;
-    height: 100%;
+.by {
     background-color: #222D32;
 }
-
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: #337ab7;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
 .mt_150 {
     margin-top: 150px;
+}
+/* // 首页的 标题 */
+.lt_aside {
+    width: 180px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #222D32; 
+    z-index: 666;
+    transition: all 1s;       
+}
+.lt_aside.hidemenu {
+    left: -180px;
+}
+.lt_aside .brand {
+    height: 50px;
+    background-color: #367FA9;
+}
+.lt_aside .brand a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+}
+.lt_aside .user {
+    height: 180px;
+    width: 100%;
+    padding-top: 30px;
+
+}
+.lt_aside .user img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+.lt_aside .user p {
+    color: #fff;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+}
+.lt_aside .nav a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 40px;
+    color: #fff;
+    border-left: 3px solid transparent;
+}
+.lt_aside .nav a.current {
+    background-color: #1D1F21;
+    border-left: 3px solid #006699;
+} 
+.lt_aside .nav i {
+    margin-right: 6px;
+}
+.lt_aside .nav .child {
+    display: none;
+}
+.lt_aside .nav .child a{
+    padding-left: 60px;
+}
+
+/* 右侧的内容 */
+.lt_main {
+    padding-left: 180px;
+    height: 1000px;
+    padding-top: 50px;
+    /* background-color: pink; */
+    transition: all 1s;
+}
+.lt_main.hidemenu {
+    padding-left: 0;
+}
+.lt_main .lt_topbar {
+    width: 100%;
+    height: 50px;
+    background-color: #3C8DBC;  
+    padding-left: 180px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: all 1s;
+}
+.lt_topbar.hidemenu {
+    padding-left: 0;
+}
+.lt_main .lt_topbar a {
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
+    color: #fff;
+}
+.lt_main .mt_20 {
+    margin-top: 20px;
+}
+.red {
+    color: #A94442;
+}
+.lt_main .lt_content > div {
+    width: 48%;
+    height: 400px;
+    /* background-color: skyblue; */
 }
