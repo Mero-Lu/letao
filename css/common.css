@@ -7,6 +7,7 @@ a:hover,
 a:active {
     text-decoration: none;
     color: #337ab7;
+    cursor: pointer;
 }
 ul {
     padding: 0;
@@ -124,8 +125,14 @@ ul {
 .red {
     color: #A94442;
 }
-.lt_main .lt_content > div {
+.lt_main .lt_content .echarts_left,
+.lt_main .lt_content .echarts_right {
     width: 48%;
     height: 400px;
     /* background-color: skyblue; */
+}
+.table.table-bordered th,
+.table.table-bordered td {
+    text-align: center;
+    vertical-align: middle;
 }
