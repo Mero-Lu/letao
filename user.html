@@ -53,6 +53,22 @@
                 <li><a href="index.html">管理系统</a></li>
                 <li class="active">首页</li>
             </ol>
+            <div class="lt_content">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th width="10%" class="text-center">序号</th>
+                            <th width="20%" class="text-center">用户名</th>
+                            <th width="30%" class="text-center">手机号</th>
+                            <th width="20%" class="text-center">状态</th>
+                            <th width="20%" class="text-center">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody  class="text-center">
+
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 
@@ -75,15 +91,35 @@
             </div>
         </div>
     </div>
+
+    <!-- 表格的模板 -->
+    <script type="text/html" id="tpl">
+        {{each rows v i}}
+        <tr>
+            <td>{{ i + 1 }}</td>
+            <td>{{ v.username }}</td>
+            <td>{{ v.mobile }}</td>
+            <td>{{ v.isDelete === 1 ? '正常' : '禁用' }}</td>
+            <td data-id="{{ v.id }}">
+                {{if v.isDelete == 1}}
+                <button class="btn btn-danger">禁用</button>
+                {{else}}
+                <button class="btn btn-success">启用</button>
+                {{/if}}
+            </td>
+        </tr>
+        {{/each}}
+    </script>
   
 
     <script src="./lib/jquery/jquery.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.js"></script>
     <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
     <script src="./lib/nprogress/nprogress.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
     <script src="./js/common.js"></script>
     <script src="./js/isLogin.js"></script>
-    
+    <script src="./js/user.js"></script>
 </body>
 
 </html>
