@@ -66,7 +66,7 @@ $(function ($) {
         // 将选中的 id 设置到 input 表单元素中
         $('[name="categoryId"]').val(id);
 
-        // 重置校验状态
+        // 更新校验状态
         $('#form').data("bootstrapValidator").updateStatus("categoryId", "VALID");
     })
 
@@ -87,7 +87,7 @@ $(function ($) {
                 validators: {
                     // 不能为空
                     notEmpty: {
-                        message: '用户名不能为空'
+                        message: '请选择一级分类'
                     }
                 },
             },  // 图片的地址
@@ -125,7 +125,7 @@ $(function ($) {
             $('#imgBox img').attr('src', picAddr);
             // 将图片地址存在隐藏域中
             $('[name="brandLogo"]').val(picAddr);
-            // 重置校验状态
+            // 跟新校验状态
             $('#form').data("bootstrapValidator").updateStatus("brandLogo", "VALID")
         }
     })
@@ -155,5 +155,14 @@ $(function ($) {
             }
         })
     });
+    // 点击取消按钮,也重置表单
+    $('#del').on('click',function(){
+        // 重置表单里面的内容和校验状态
+        $('#form').data("bootstrapValidator").resetForm( true );
+         // 找到下拉菜单文本重置
+         $('#dropdownText').text("请选择一级分类");
+         // 找到图片重置
+         $('#imgBox img').attr('src', 'images/none.png');
+    })
 
 })

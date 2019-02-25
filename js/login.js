@@ -48,7 +48,7 @@ $(function ($) {
         }
     })
     // console.log(222);
-    // 进行登录请求
+    // 进行登录请求   表单校验完成之后的回调
     $("#form").on('success.form.bv', function (e) {
         e.preventDefault();
         //使用ajax提交逻辑

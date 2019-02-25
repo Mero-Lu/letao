@@ -139,3 +139,6 @@ ul {
 .mt_20 {
     margin-top: 20px;
 }
+#textarea {
+    resize: none;
+}
